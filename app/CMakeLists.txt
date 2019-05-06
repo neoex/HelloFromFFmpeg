@@ -26,6 +26,13 @@ add_library(avcodec
 set_target_properties(avcodec
                       PROPERTIES IMPORTED_LOCATION
                       ${CMAKE_SOURCE_DIR}/src/main/jni/ffmpeg/armeabi/libavcodec.so)
+
+add_library(postproc
+            SHARED
+            IMPORTED)
+set_target_properties(postproc
+                      PROPERTIES IMPORTED_LOCATION
+                      ${CMAKE_SOURCE_DIR}/src/main/jni/ffmpeg/armeabi/libpostproc.so)
 add_library(avdevice
             SHARED
             IMPORTED)
